@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular-resource.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.6.0.js"></script>
+    <script src="js/app.js"></script>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+</head>
+<body ng-app="paparrot">
+
+<div ng-controller="QuotesCtrl">
+    <alert ng-repeat="quote in quotes" type="quote.type" close="closeAlert($index)">{{quote.title}}</alert>
+    <button class='btn' ng-click="addAlert()">Add Quote</button>
+</div>
+</body>
+</html>
